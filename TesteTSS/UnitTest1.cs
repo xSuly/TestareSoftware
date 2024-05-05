@@ -127,6 +127,58 @@ namespace TesteTSS
             Assert.AreEqual(expected, result, "Metoda ToString nu returnează formatul corect.");
         }
 
+        // TESTE STRUCTURALE
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void AdaugaFaza_NullInput_ThrowsException()
+        {
+            joc.AdaugaFaza(null);  // Așteptăm o excepție de tip ArgumentNullException
+        }
+
+        [TestMethod]
+        public void AfisareFaze_ListaGoala_ContineDoarTitlul_Test()
+        {
+            using (var consoleOutput = new ConsoleOutput())
+            {
+                joc.AfisareFaze();
+                var output = consoleOutput.GetOutput().Trim();  // Elimină spațiile albe de la începutul și sfârșitul string-ului
+                var expectedOutput = $"Fazele jocului {joc.Nume}:";
+
+                Assert.AreEqual(expectedOutput, output, "Output-ul ar trebui să conțină doar titlul când lista de faze este goală.");
+            }
+        }
+
+        [TestMethod]
+        public void AdaugaScor_MultipleValidScores_Test()
+        {
+            joc.AdaugaScor(10);
+            joc.AdaugaScor(20);
+            joc.AdaugaScor(30);
+            Assert.AreEqual(3, joc.Scoruri.Count);
+            Assert.AreEqual(10, joc.Scoruri[0]);
+            Assert.AreEqual(20, joc.Scoruri[1]);
+            Assert.AreEqual(30, joc.Scoruri[2]);
+        }
+
+        [TestMethod]
+        public void VerificaCompatibilitate_CaseInsensitive_Test()
+        {
+            using (var consoleOutput = new ConsoleOutput())
+            {
+                joc.VerificaCompatibilitate("pC");  // Testare cu caz mixt
+                StringAssert.Contains(consoleOutput.GetOutput(), "Witcher 3 este disponibil pe pC.");
+            }
+        }
+
+        [TestMethod]
+        public void ToString_ExtremeValues_Test()
+        {
+            var jocExtrem = new JocVideo("", "", -1);
+            var result = jocExtrem.ToString();
+            var expected = "Nume: , Platforma: , Anul Lansarii: -1";
+            Assert.AreEqual(expected, result, "Metoda ToString ar trebui să gestioneze și valorile extreme corect.");
+        }
     }
 
     public class ConsoleOutput : IDisposable
