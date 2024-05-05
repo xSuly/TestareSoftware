@@ -179,6 +179,73 @@ namespace TesteTSS
             var expected = "Nume: , Platforma: , Anul Lansarii: -1";
             Assert.AreEqual(expected, result, "Metoda ToString ar trebui să gestioneze și valorile extreme corect.");
         }
+
+        // MUTATION
+
+        [TestMethod]
+        public void AdaugaFaza_NullInput_ThrowsArgumentNullExceptionWithCorrectMessage()
+        {
+            try
+            {
+                joc.AdaugaFaza(null);
+                Assert.Fail("Expected an ArgumentNullException to be thrown.");
+            }
+            catch (ArgumentNullException ex)
+            {
+                StringAssert.Contains(ex.Message, "Faza nu poate fi null.");
+            }
+        }
+
+        [TestMethod]
+        public void AdaugaScor_NegativeScore_ThrowsArgumentExceptionWithCorrectMessage()
+        {
+            try
+            {
+                joc.AdaugaScor(-1);
+                Assert.Fail("Expected an ArgumentException to be thrown for negative scores.");
+            }
+            catch (ArgumentException ex)
+            {
+                StringAssert.Contains(ex.Message, "Scorul nu poate fi negativ.");
+            }
+        }
+
+        [TestMethod]
+        public void AfisareFaze_CorrectlyDisplaysPhases()
+        {
+            // Arrange
+            var joc = new JocVideo("ExampleGame", "PC", 2020);
+            joc.AdaugaFaza("Faza 1");
+            joc.AdaugaFaza("Faza 2");
+            using (var consoleOutput = new ConsoleOutput())
+            {
+                // Act
+                joc.AfisareFaze();
+
+                // Assert
+                var output = consoleOutput.GetOutput();
+                StringAssert.Contains(output, "Faza 1: Faza 1");
+                StringAssert.Contains(output, "Faza 2: Faza 2");
+                StringAssert.Contains(output, "Fazele jocului ExampleGame:");
+            }
+        }
+
+        [TestMethod]
+        public void VerificaCompatibilitate_NullPlatform_ThrowsArgumentNullException()
+        {
+            var joc = new JocVideo("Witcher 3", "PC", 2015);
+
+            try
+            {
+                joc.VerificaCompatibilitate(null);
+                Assert.Fail("Expected an ArgumentNullException to be thrown.");
+            }
+            catch (ArgumentNullException ex)
+            {
+                StringAssert.Contains(ex.Message, "Platforma cautata nu poate fi null.", "The exception message does not contain the expected substring.");
+            }
+        }
+
     }
 
     public class ConsoleOutput : IDisposable
@@ -204,4 +271,8 @@ namespace TesteTSS
             stringWriter.Dispose();
         }
     }
+
+
+
+
 }
