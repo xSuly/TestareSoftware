@@ -25,6 +25,9 @@ namespace ProiectTSS
 
         public void AdaugaFaza(string faza)
         {
+            if (faza == null)
+                throw new ArgumentNullException(nameof(faza), "Faza nu poate fi null.");
+
             Faze.Add(faza);
         }
 
