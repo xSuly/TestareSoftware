@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LSPZ4VhcNtKOjy/nTqidUQfqqCl8MK1tSh4Sev3FP7BheGVPs7BNVmVjVXHhOFH25TXwm6LZUoeY8iwC/Fx3Aw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\radus\\source\\repos\\ProiectTSS\\ProiectTSS\\ProiectTSS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\radus\\.nuget\\packages\\coverlet.msbuild\\6.0.2\\coverlet.msbuild.6.0.2.nupkg.sha512",
+    "C:\\Users\\radus\\.nuget\\packages\\reportgenerator\\5.2.4\\reportgenerator.5.2.4.nupkg.sha512"
+  ],
+  "logs": []
+}

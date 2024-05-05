@@ -1,0 +1,43 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ProiectTSS/1.0.0": {
+        "dependencies": {
+          "ReportGenerator": "5.2.4",
+          "coverlet.msbuild": "6.0.2"
+        },
+        "runtime": {
+          "ProiectTSS.dll": {}
+        }
+      },
+      "coverlet.msbuild/6.0.2": {},
+      "ReportGenerator/5.2.4": {}
+    }
+  },
+  "libraries": {
+    "ProiectTSS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "coverlet.msbuild/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8b4jBNH7mcQy1otyQErjjIUuGD74XxKZ1wvDufbY7jhWwckl7wIa+icjwdPYeI0aYMS4Tp63LIZvyMFjWwOMDw==",
+      "path": "coverlet.msbuild/6.0.2",
+      "hashPath": "coverlet.msbuild.6.0.2.nupkg.sha512"
+    },
+    "ReportGenerator/5.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2Aj3edZ7XYTkxLI6W9lZzNQWloTnzpJRA//SzNBDNig5XAZMYeFir6LMCfe9NsxPIuleJJ1t3Z0luwFW4dBacg==",
+      "path": "reportgenerator/5.2.4",
+      "hashPath": "reportgenerator.5.2.4.nupkg.sha512"
+    }
+  }
+}

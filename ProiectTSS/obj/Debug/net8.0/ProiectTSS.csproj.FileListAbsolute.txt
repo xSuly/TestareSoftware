@@ -1,0 +1,14 @@
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\bin\Debug\net8.0\ProiectTSS.exe
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\bin\Debug\net8.0\ProiectTSS.deps.json
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\bin\Debug\net8.0\ProiectTSS.runtimeconfig.json
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\bin\Debug\net8.0\ProiectTSS.dll
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\bin\Debug\net8.0\ProiectTSS.pdb
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.AssemblyInfoInputs.cache
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.AssemblyInfo.cs
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.csproj.CoreCompileInputs.cache
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.dll
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\refint\ProiectTSS.dll
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.pdb
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ProiectTSS.genruntimeconfig.cache
+C:\Users\radus\source\repos\ProiectTSS\ProiectTSS\obj\Debug\net8.0\ref\ProiectTSS.dll
