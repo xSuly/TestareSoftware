@@ -5,3 +5,5 @@ CTI - Grupa 461 - Echipa A15
  -Albei Liviu-Andrei
  -Codreanu Radu-Stefan
  -Cojocaru Andrei-Laurentiu
+
+ Prezentare proiect: https://youtu.be/rGZvxcT2oVA
